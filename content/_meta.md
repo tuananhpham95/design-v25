@@ -1,8 +1,8 @@
 ---
-Logo: image/leaf_256x256.png
+Logo: image/anh2.jpg
 Tagline: My portfolio.
 Social:
-    - title: Link till sidans github repo.
-      url: https://github.com/dbwebb-se/design-v3
-      icon: github
+  - title: Link till sidans github repo.
+    url: https://github.com/tuananhpham95/design-v25
+    icon: github
 ---
