@@ -2,7 +2,6 @@
  * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
-@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 .fa,
 .fas,
 .far,
@@ -6422,7 +6421,7 @@ template {
   display: none;
 }
 
-.header, .site-header {
+.site-header, .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6446,8 +6445,23 @@ code {
   font-size: 0.85rem;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   background-color: #fff;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 * {
@@ -6477,32 +6491,35 @@ img {
 }
 
 .main {
-  height: 100vh;
+  flex: 1 0 auto;
 }
 
 .main img {
-  width: 300px;
+  width: 250px;
 }
 
 .footer {
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 10px;
-  height: 100px;
   background-color: #cbdaed;
 }
+
 .footer p {
   margin: 0;
 }
+
 .footer .social {
   margin-top: 10px;
 }
+
 .footer .social a {
-  color: #cbdaed;
   margin: 0 5px;
 }
+
 .footer .social a i {
   font-size: 30px;
 }
@@ -6512,7 +6529,7 @@ img {
     padding: 5px;
   }
   .footer .social a i {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 
