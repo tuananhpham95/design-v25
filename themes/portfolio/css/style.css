@@ -30,20 +30,25 @@ body {
 .main {
   flex: 1 0 auto;
 }
-
+.main img {
+  max-width: 400px;
+}
 .header,
 .footer {
   flex: 0 0 auto;
+  background-color: rgb(179, 121, 131);
 }
 
 /* Header */
-
+.logo {
+  width: 250px;
+}
 .header,
 .site-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-
 /* Title */
 
 .title,

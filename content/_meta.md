@@ -1,5 +1,5 @@
 ---
-Logo: image/anh2.jpg
+Logo: image/anh4.jpg
 Tagline: My portfolio.
 Social:
   - title: Link till sidans github repo.
