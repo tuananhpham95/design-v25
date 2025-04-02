@@ -1,0 +1,92 @@
+@import '../../shared/fontawesome/scss/fontawesome';
+$fa-font-path: '../../shared/fontawesome/webfonts';
+@import '../../shared/fontawesome/scss/brands';
+@import '../../shared/fontawesome/scss/solid';
+@import '../../shared/fontawesome/scss/regular';
+
+@import '../../node_modules/normalize.css/normalize';
+@import 'variables';
+@import 'header';
+@import 'blockquotes';
+@import 'code';
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+  background-color: $background-color;
+}
+
+* {
+  color: $font-color;
+  font-family: 'PT Serif', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'PT Serif', sans-serif;
+}
+
+.logo {
+  width: 150px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.site-header {
+  @extend %header;
+  gap: 20px;
+}
+
+.main {
+  height: 100vh;
+}
+
+.main img {
+  width: 300px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: $spacing / 2;
+  height: 100px;
+  background-color: $primary-color;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer .social {
+  margin-top: $spacing / 2;
+}
+
+.footer .social a {
+  color: $primary-color;
+  margin: 0 $spacing / 4;
+}
+
+.footer .social a i {
+  font-size: 30px;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: $spacing / 4;
+
+    .social {
+      a {
+        i {
+          font-size: 50px; // Mindre ikoner på mobilen
+        }
+      }
+    }
+  }
+}

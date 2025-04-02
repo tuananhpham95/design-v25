@@ -1,0 +1,23 @@
+{
+  "name": "themes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "sass --watch portfolio/scss/style.scss:portfolio/css/style.css",
+    "lint": "stylelint \"**/*.scss\"",
+    "style": "sass portfolio/scss/style.scss portfolio/css/style.css --no-source-map",
+    "style-min": "sass portfolio/scss/style.scss portfolio/css/style.min.css --no-source-map --style compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "normalize.css": "^8.0.1",
+    "sass": "^1.86.1",
+    "stylelint": "^16.17.0",
+    "stylelint-config-sass-guidelines": "^12.1.0"
+  }
+}

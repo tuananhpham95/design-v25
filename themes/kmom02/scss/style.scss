@@ -1,0 +1,31 @@
+@use '../../node_modules/normalize.css/normalize';
+@use 'variables' as *;
+
+@use 'blockquotes' as *;
+@use 'code' as *;
+@use '../../shared/fontawesome/scss/fontawesome' as fa;
+@use '../../shared/fontawesome/scss/brands' as brands;
+@use '../../shared/fontawesome/scss/solid' as solid;
+@use '../../shared/fontawesome/scss/regular' as regular;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: $background-color;
+}
+
+* {
+  color: $font-color;
+}
