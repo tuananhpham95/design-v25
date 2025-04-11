@@ -5,8 +5,8 @@ Description: This is the portfolio of Tuan Anh Pham.
 
 # Home page
 
-Hi, I’m Tuan Anh Pham, a passionate developer and creative thinker. I enjoy building projects that solve real-world problems and experimenting with new technologies. This portfolio showcases my work, skills, and journey. Feel free to explore and get in touch!
+Hej, jag heter Tuan Anh Pham, en passionerad utvecklare och kreativ tänkare. Jag tycker om att bygga projekt som löser verkliga problem och att experimentera med ny teknik. Den här portföljen visar upp mitt arbete, mina färdigheter och min resa. Känn dig fri att utforska och ta gärna kontakt!
 
-Here’s a little something that represents me:
+Här är något som representerar mig:
 
 ![picture of me](%assets_url%/img/anh2.jpg){.me}
