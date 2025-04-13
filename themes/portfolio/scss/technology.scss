@@ -1,0 +1,108 @@
+.landing-page {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    'technology technology technology'
+    'html css css'
+    'js js php'
+    'py py py'
+    'git sqlite sqlite';
+}
+
+.landing-page h1 {
+  grid-column: span 2;
+  justify-self: center;
+  grid-area: technology;
+}
+
+.box {
+  border: 1px solid #808080;
+  padding: 1.96rem;
+  cursor: pointer;
+}
+
+.box:hover {
+  box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.box a {
+  text-decoration: none;
+}
+
+.technology {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.technology .article {
+  width: 60%;
+}
+
+.technology .menu {
+  width: 30%;
+}
+
+.css {
+  grid-area: css;
+}
+
+.html {
+  grid-area: html;
+}
+
+.javascript {
+  grid-area: js;
+}
+
+.php {
+  grid-area: php;
+}
+
+.python {
+  grid-area: py;
+}
+
+.git {
+  grid-area: git;
+}
+
+.sqlite {
+  grid-area: sqlite;
+}
+
+@media (max-width: 1085px) {
+  .landing-page {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'technology'
+      'html'
+      'css'
+      'js'
+      'php'
+      'py'
+      'git'
+      'sqlite';
+  }
+
+  .box {
+    margin: 0 20px;
+  }
+
+  .landing-page h1 {
+    font-size: 20px;
+  }
+
+  .technology {
+    flex-direction: column;
+  }
+
+  .skills {
+    display: flex;
+    gap: 15px;
+  }
+}
