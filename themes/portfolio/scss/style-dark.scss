@@ -13,7 +13,14 @@ $fa-font-path: '../../shared/fontawesome/webfonts';
 @import 'code';
 @import 'technology';
 
+// Importera Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+// Överskriv variabler för mörkt tema
+$background-color: #1c2526;
+$font-color: #d4d4d4;
+$primary-color: #2e86ab;
+$spacing: 20px;
 
 html {
   height: 100%;
@@ -27,6 +34,11 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'PT Serif', serif;
+  color: $font-color;
+}
+
+.nav a {
+  color: $font-color;
 }
 
 .site-wrapper {
@@ -37,7 +49,6 @@ body {
 
 * {
   color: $font-color;
-  font-family: 'PT Serif', sans-serif;
 }
 
 h1,
@@ -46,42 +57,43 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'PT Serif', sans-serif;
+  font-family: 'PT Serif', serif;
 }
 
 .logo {
   width: 150px;
-}
-
-img {
-  max-width: 100%;
+  filter: brightness(0.7) sepia(0.2);
 }
 
 .snapshot {
-  width: 100px;
+  max-width: 100px;
   height: auto;
   display: block;
 }
 
-table {
-  background-color: #000;
+img {
+  max-width: 100%;
+  filter: brightness(0.8) sepia(0.1);
 }
 
 .header {
   @extend %header;
+  background-color: $primary-color;
 }
 
 .site-header {
   @extend %header;
   gap: 20px;
+  background-color: $primary-color;
 }
 
 .main {
   flex: 1 0 auto;
 }
 
-.main .me {
+.main img {
   width: 250px;
+  filter: brightness(0.8) sepia(0.1);
 }
 
 .footer {
@@ -99,13 +111,15 @@ table {
 }
 
 .footer .social {
-  margin-top: $spacing / 2;
   display: flex;
   align-items: center;
+  margin-top: $spacing / 2;
 }
 
 .footer .social a {
   margin: 0 $spacing / 4;
+  color: $background-color;
+  text-decoration: none;
 }
 
 .footer .social a i {
@@ -125,15 +139,24 @@ table {
 }
 
 .footer .theme-toggle:hover {
-  color: $primary-color;
+  color: $dark-primary-color;
 }
 
-/* Stil för landningssidor (teknologier och analyser) */
+.footer .theme-toggle .fa-moon {
+  margin-right: 0;
+}
+
+.footer .theme-toggle.dark-mode {
+  color: $dark-font-color;
+}
+
+/* Stil för landningssidor (analys och teknologi) */
 .main.landing .landing-page {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1em;
   padding: $spacing;
+  background-color: $background-color;
 }
 
 .landing-page .report-grid {
@@ -147,12 +170,13 @@ table {
   padding: 1.96rem;
   text-align: center;
   cursor: pointer;
-  background-color: #f9f9f9;
+  background-color: #2a3334;
   border-radius: 5px;
+  color: $font-color;
 }
 
 .landing-page .box:hover {
-  box-shadow: 10px 10px 5px 0 rgba(201, 10, 10, 0.2);
+  box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .landing-page .box h1 {
@@ -167,23 +191,22 @@ table {
 }
 
 .landing-page .box a:hover {
-  color: $primary-color;
+  color: $dark-primary-color;
 }
 
 /* Specifika klasser för analyser */
 .box.colors {
-  background-color: #e0f7fa;
+  background-color: #2a3a3e;
 }
 
 .box.load {
-  background-color: #fff9c4;
+  background-color: #2e3a2e;
 }
 
 .box.design {
-  background-color: #e1bee7;
+  background-color: #3a2e3e;
 }
 
-/* Responsivitet */
 @media (max-width: 600px) {
   .hidden {
     display: none;
@@ -201,12 +224,6 @@ table {
     font-size: 1.8rem;
   }
 
-  .main.landing .landing-page {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
   .main.landing .landing-page {
     grid-template-columns: 1fr;
   }

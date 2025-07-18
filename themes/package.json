@@ -1,17 +1,17 @@
 {
   "name": "themes",
   "version": "1.0.0",
-  "description": "",
+  "description": "Theme for portfolio site with light and dark modes",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "sass --watch portfolio/scss/style.scss:portfolio/css/style.css",
+    "watch": "sass --watch portfolio/scss/style.scss:portfolio/css/style.css portfolio/scss/style-dark.scss:portfolio/css/style-dark.css",
     "lint": "stylelint \"**/*.scss\"",
-    "style": "sass portfolio/scss/style.scss portfolio/css/style.css --no-source-map",
-    "style-min": "sass portfolio/scss/style.scss portfolio/css/style.min.css --no-source-map --style compressed"
+    "style": "sass portfolio/scss/style.scss portfolio/css/style.css --no-source-map && sass portfolio/scss/style-dark.scss portfolio/css/style-dark.css --no-source-map",
+    "style-min": "sass portfolio/scss/style.scss portfolio/css/style.min.css --no-source-map --style compressed && sass portfolio/scss/style-dark.scss portfolio/css/style-dark.min.css --no-source-map --style compressed"
   },
   "keywords": [],
-  "author": "",
+  "author": "Dannipham",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
