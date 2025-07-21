@@ -12,7 +12,8 @@ $fa-font-path: '../../shared/fontawesome/webfonts';
 @import 'blockquotes';
 @import 'code';
 @import 'technology';
-
+@import 'analysis';
+@import 'gallery';
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
 
 html {
@@ -64,7 +65,7 @@ img {
 }
 
 table {
-  background-color: #000;
+  background-color: #4a4a4a;
 }
 
 .header {
@@ -126,88 +127,4 @@ table {
 
 .footer .theme-toggle:hover {
   color: $primary-color;
-}
-
-/* Stil för landningssidor (teknologier och analyser) */
-.main.landing .landing-page {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1em;
-  padding: $spacing;
-}
-
-.landing-page .report-grid {
-  display: grid;
-  grid-template-columns: inherit;
-  gap: 1em;
-}
-
-.landing-page .box {
-  border: 1px solid #4a4a4a;
-  padding: 1.96rem;
-  text-align: center;
-  cursor: pointer;
-  background-color: #f9f9f9;
-  border-radius: 5px;
-}
-
-.landing-page .box:hover {
-  box-shadow: 10px 10px 5px 0 rgba(201, 10, 10, 0.2);
-}
-
-.landing-page .box h1 {
-  margin: 0;
-  font-size: 1.5rem;
-  color: $font-color;
-}
-
-.landing-page .box a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.landing-page .box a:hover {
-  color: $primary-color;
-}
-
-/* Specifika klasser för analyser */
-.box.colors {
-  background-color: #e0f7fa;
-}
-
-.box.load {
-  background-color: #fff9c4;
-}
-
-.box.design {
-  background-color: #e1bee7;
-}
-
-/* Responsivitet */
-@media (max-width: 600px) {
-  .hidden {
-    display: none;
-  }
-
-  .footer {
-    padding: $spacing / 4;
-  }
-
-  .footer .social a i {
-    font-size: 40px;
-  }
-
-  .footer .theme-toggle {
-    font-size: 1.8rem;
-  }
-
-  .main.landing .landing-page {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .main.landing .landing-page {
-    grid-template-columns: 1fr;
-  }
 }

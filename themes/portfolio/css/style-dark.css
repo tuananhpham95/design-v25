@@ -6542,6 +6542,149 @@ code {
     gap: 15px;
   }
 }
+.main.landing .landing-analys {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  padding: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.landing-analys .report-grid {
+  display: grid;
+  grid-template-columns: inherit;
+  gap: 1em;
+}
+
+.landing-analys h1 {
+  justify-self: center;
+  font-size: 1.5rem;
+  margin: 0;
+  color: #333;
+}
+
+.landing-analys .box {
+  border: 1px solid #4a4a4a;
+  padding: 1.96rem;
+  text-align: center;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  border-radius: 14px;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.landing-analys .box:hover {
+  box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.landing-analys .box a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.landing-analys .box a:hover {
+  color: rgb(193.9606299213, 216.1023622047, 240.0393700787);
+}
+
+/* Specifika klasser för analyser */
+.landing-analys .box.colors {
+  background-color: #e0f7fa;
+}
+
+.landing-analys .box.load {
+  background-color: #fff9c4;
+}
+
+.landing-analys .box.design {
+  background-color: #e1bee7;
+}
+
+/* Responsivitet */
+@media (max-width: 600px) {
+  .hidden {
+    display: none;
+  }
+  .footer {
+    padding: 5px;
+  }
+  .footer .social a i {
+    font-size: 40px;
+  }
+  .footer .theme-toggle {
+    font-size: 1.8rem;
+  }
+  .main.landing .landing-analys {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .main.landing .landing-analys {
+    grid-template-columns: 1fr;
+  }
+}
+/* galleri-sida */
+.gallery-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.gallery-grid a {
+  text-decoration: none;
+}
+.gallery-grid img,
+.gallery-grid picture {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s;
+}
+.gallery-grid img:hover,
+.gallery-grid picture:hover {
+  transform: scale(1.01);
+}
+
+/* Responsiv iframe för YouTube */
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  .embed-container {
+    max-width: 300px;
+  }
+}
 html {
   height: 100%;
 }
@@ -6610,7 +6753,6 @@ img {
 }
 
 .main img {
-  width: 250px;
   filter: brightness(0.8) sepia(0.1);
 }
 
@@ -6668,8 +6810,8 @@ img {
   color: #e0e0e0;
 }
 
-/* Stil för landningssidor (analys och teknologi) */
-.main.landing .landing-page {
+/* Stil för landningssidor analys sida */
+.main.landing .landing-analys {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1em;
@@ -6677,13 +6819,13 @@ img {
   background-color: #1c2526;
 }
 
-.landing-page .report-grid {
+.landing-analys .report-grid {
   display: grid;
   grid-template-columns: inherit;
   gap: 1em;
 }
 
-.landing-page .box {
+.landing-analys .box {
   border: 1px solid #4a4a4a;
   padding: 1.96rem;
   text-align: center;
@@ -6693,53 +6835,102 @@ img {
   color: #d4d4d4;
 }
 
-.landing-page .box:hover {
+.landing-analys .box:hover {
   box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
-.landing-page .box h1 {
+.landing-analys h1 {
   margin: 0;
   font-size: 1.5rem;
   color: #d4d4d4;
 }
 
-.landing-page .box a {
+.landing-analys .box a {
   text-decoration: none;
   color: inherit;
 }
 
-.landing-page .box a:hover {
-  color: #4dabf7;
+.landing-analys .box a:hover {
+  color: rgb(64.2995391705, 162.4377880184, 203.7004608295);
 }
 
 /* Specifika klasser för analyser */
-.box.colors {
+.landing-analys .box.colors {
   background-color: #2a3a3e;
 }
 
-.box.load {
+.landing-analys .box.load {
   background-color: #2e3a2e;
 }
 
-.box.design {
+.landing-analys .box.design {
   background-color: #3a2e3e;
 }
 
-@media (max-width: 600px) {
-  .hidden {
-    display: none;
+/* galleri-sida */
+.gallery-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 40px;
+  background-color: #1c2526;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
-  .footer {
-    padding: 5px;
-  }
-  .footer .social a i {
-    font-size: 40px;
-  }
-  .footer .theme-toggle {
-    font-size: 1.8rem;
-  }
-  .main.landing .landing-page {
-    grid-template-columns: 1fr;
+}
+.gallery-grid a {
+  text-decoration: none;
+  color: #d4d4d4;
+}
+.gallery-grid img,
+.gallery-grid picture {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s;
+  filter: brightness(0.8) sepia(0.1);
+}
+.gallery-grid img:hover,
+.gallery-grid picture:hover {
+  transform: scale(1.01);
+}
+
+/* Responsiv iframe för YouTube */
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background-color: #1c2526;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1c2526;
+}
+
+@media (max-width: 767px) {
+  .embed-container {
+    max-width: 300px;
   }
 }
 

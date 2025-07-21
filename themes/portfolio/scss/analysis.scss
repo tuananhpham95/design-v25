@@ -1,0 +1,87 @@
+.main.landing .landing-analys {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  padding: $spacing;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.landing-analys .report-grid {
+  display: grid;
+  grid-template-columns: inherit;
+  gap: 1em;
+}
+
+.landing-analys h1 {
+  justify-self: center;
+  font-size: 1.5rem;
+  margin: 0;
+  color: $font-color;
+}
+
+.landing-analys .box {
+  border: 1px solid #4a4a4a;
+  padding: 1.96rem;
+  text-align: center;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  border-radius: 14px;
+  color: $font-color;
+  box-sizing: border-box;
+}
+
+.landing-analys .box:hover {
+  box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.landing-analys .box a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.landing-analys .box a:hover {
+  color: color.adjust($primary-color, $lightness: 10%);
+}
+
+/* Specifika klasser för analyser */
+.landing-analys .box.colors {
+  background-color: #e0f7fa;
+}
+
+.landing-analys .box.load {
+  background-color: #fff9c4;
+}
+
+.landing-analys .box.design {
+  background-color: #e1bee7;
+}
+
+/* Responsivitet */
+@media (max-width: 600px) {
+  .hidden {
+    display: none;
+  }
+
+  .footer {
+    padding: $spacing / 4;
+  }
+
+  .footer .social a i {
+    font-size: 40px;
+  }
+
+  .footer .theme-toggle {
+    font-size: 1.8rem;
+  }
+
+  .main.landing .landing-analys {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .main.landing .landing-analys {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,37 @@
+{% include 'incl/header.twig' %}
+
+<body>
+    {% include 'incl/nav.twig' %}
+
+    <div class="main landing" role="main">
+        <div class="gallery-page">
+            {{ content|markdown|raw }}
+            <div class="gallery-grid">
+                {% set images = [
+                    'austria2.jpeg',
+                    'anh1.jpeg',
+                    'anh3.jpeg',
+                    'anh4.jpeg',
+                    'anh5.jpeg',
+                    'austria.jpeg'
+                ] %}
+                {% for image in images %}
+                    <a href="{{ base_url }}/assets/img/{{ image }}" target="_blank">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="{{ base_url }}/image/{{ image }}?w=900&q=80">
+                            <img src="{{ base_url }}/image/{{ image }}?w=300&q=80" alt="{{ image|replace({'.jpg': '', '.png': ''})|capitalize }}">
+                        </picture>
+                    </a>
+                {% endfor %}
+            </div>
+            <div class="embed-container">
+                <iframe src="https://www.youtube.com/embed/n-hK4QRGQe0" frameborder="0" allowfullscreen></iframe>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            </div>
+        </div>
+    </div>
+
+    {% include 'incl/footer.twig' %}
+</body>
+
+</html>

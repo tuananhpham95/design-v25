@@ -12,8 +12,9 @@ $fa-font-path: '../../shared/fontawesome/webfonts';
 @import 'blockquotes';
 @import 'code';
 @import 'technology';
+@import 'analysis';
+@import 'gallery';
 
-// Importera Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
 
 // Överskriv variabler för mörkt tema
@@ -92,7 +93,6 @@ img {
 }
 
 .main img {
-  width: 250px;
   filter: brightness(0.8) sepia(0.1);
 }
 
@@ -150,8 +150,8 @@ img {
   color: $dark-font-color;
 }
 
-/* Stil för landningssidor (analys och teknologi) */
-.main.landing .landing-page {
+/* Stil för landningssidor analys sida */
+.main.landing .landing-analys {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1em;
@@ -159,13 +159,13 @@ img {
   background-color: $background-color;
 }
 
-.landing-page .report-grid {
+.landing-analys .report-grid {
   display: grid;
   grid-template-columns: inherit;
   gap: 1em;
 }
 
-.landing-page .box {
+.landing-analys .box {
   border: 1px solid #4a4a4a;
   padding: 1.96rem;
   text-align: center;
@@ -175,56 +175,103 @@ img {
   color: $font-color;
 }
 
-.landing-page .box:hover {
+.landing-analys .box:hover {
   box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
-.landing-page .box h1 {
+.landing-analys h1 {
   margin: 0;
   font-size: 1.5rem;
   color: $font-color;
 }
 
-.landing-page .box a {
+.landing-analys .box a {
   text-decoration: none;
   color: inherit;
 }
 
-.landing-page .box a:hover {
-  color: $dark-primary-color;
+.landing-analys .box a:hover {
+  color: color.adjust($primary-color, $lightness: 10%);
 }
 
 /* Specifika klasser för analyser */
-.box.colors {
+.landing-analys .box.colors {
   background-color: #2a3a3e;
 }
 
-.box.load {
+.landing-analys .box.load {
   background-color: #2e3a2e;
 }
 
-.box.design {
+.landing-analys .box.design {
   background-color: #3a2e3e;
 }
 
-@media (max-width: 600px) {
-  .hidden {
-    display: none;
+/* galleri-sida */
+.gallery-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $spacing;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 40px;
+  background-color: $background-color;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .footer {
-    padding: $spacing / 4;
+  a {
+    text-decoration: none;
+    color: $font-color;
   }
 
-  .footer .social a i {
-    font-size: 40px;
+  img,
+  picture {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s;
+    filter: brightness(0.8) sepia(0.1);
   }
 
-  .footer .theme-toggle {
-    font-size: 1.8rem;
+  img:hover,
+  picture:hover {
+    transform: scale(1.01);
   }
+}
 
-  .main.landing .landing-page {
-    grid-template-columns: 1fr;
+/* Responsiv iframe för YouTube */
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background-color: $background-color;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $background-color;
+}
+
+@media (max-width: 767px) {
+  .embed-container {
+    max-width: 300px;
   }
 }

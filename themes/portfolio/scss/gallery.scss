@@ -1,0 +1,63 @@
+/* galleri-sida */
+.gallery-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $spacing;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img,
+  picture {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s;
+  }
+
+  img:hover,
+  picture:hover {
+    transform: scale(1.01);
+  }
+}
+
+/* Responsiv iframe för YouTube */
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  .embed-container {
+    max-width: 300px;
+  }
+}
