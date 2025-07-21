@@ -77,6 +77,10 @@ img {
   filter: brightness(0.8) sepia(0.1);
 }
 
+.main .me {
+  width: 250px;
+}
+
 .header {
   @extend %header;
   background-color: $primary-color;
