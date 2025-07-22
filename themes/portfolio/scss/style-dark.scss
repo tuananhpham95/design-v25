@@ -62,6 +62,29 @@ h6 {
   font-family: 'PT Serif', serif;
 }
 
+h1,
+.nav ul li a,
+p,
+a,
+.header,
+.about-container.fade-in,
+.footer {
+  color: #000;
+}
+
+.main h1 {
+  color: #4da8da;
+}
+
+.subtitle {
+  color: #b0b0b0;
+}
+
+.main p,
+.about-content p {
+  color: #b0b0b0;
+}
+
 .logo {
   width: 150px;
   filter: brightness(0.7) sepia(0.2);
@@ -86,6 +109,20 @@ img {
   background-color: #2a3334;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   color: $font-color;
+}
+
+.about-content h2,
+.tools-list strong,
+.tools-list li::before,
+.contact-btn {
+  color: #4da8da;
+}
+
+.contact-btn {
+  background-color: color.adjust($primary-color, $lightness: -5%);
+  color: $background-color;
+  border: 1px solid color.adjust($primary-color, $lightness: 10%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .main .me {
@@ -171,7 +208,7 @@ img {
 }
 
 .highlight-name {
-  color: #4da8da; /* Màu sáng hơn, tương phản với #2a3334 ≈ 3.5:1 */
+  color: #4da8da;
 }
 /* Stil för landningssidor analys sida */
 .main.landing .landing-analys {
@@ -205,7 +242,7 @@ img {
 .landing-analys h1 {
   margin: 0;
   font-size: 1.5rem;
-  color: $font-color;
+  color: #4da8da;
 }
 
 .landing-analys .box a {

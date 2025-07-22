@@ -6529,6 +6529,7 @@ code {
   }
   .box {
     margin: 0 20px;
+    text-align: center;
   }
   .technology {
     flex-direction: column;
@@ -6763,11 +6764,20 @@ code {
 .contact-btn {
   display: inline-block;
   padding: 0.8rem 1.5rem;
-  color: #1a3c5e;
+  background-color: #1a3c5e;
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
-  transition: transform 0.3s;
+  font-size: 1em;
+  border: 1px solid rgb(132.5196850394, 176.9488188976, 224.9803149606);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-btn:hover {
+  background-color: rgb(132.5196850394, 176.9488188976, 224.9803149606);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .contact-btn:hover {

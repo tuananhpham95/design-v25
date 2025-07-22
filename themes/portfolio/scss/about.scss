@@ -79,11 +79,20 @@
 .contact-btn {
   display: inline-block;
   padding: 0.8rem 1.5rem;
-  color: #1a3c5e;
+  background-color: #1a3c5e;
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
-  transition: transform 0.3s;
+  font-size: 1em;
+  border: 1px solid color.adjust($primary-color, $lightness: -5%);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-btn:hover {
+  background-color: color.adjust($primary-color, $lightness: -5%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .contact-btn:hover {

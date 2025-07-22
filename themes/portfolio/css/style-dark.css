@@ -6529,6 +6529,7 @@ code {
   }
   .box {
     margin: 0 20px;
+    text-align: center;
   }
   .technology {
     flex-direction: column;
@@ -6763,11 +6764,20 @@ code {
 .contact-btn {
   display: inline-block;
   padding: 0.8rem 1.5rem;
-  color: #1a3c5e;
+  background-color: #1a3c5e;
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
-  transition: transform 0.3s;
+  font-size: 1em;
+  border: 1px solid rgb(132.5196850394, 176.9488188976, 224.9803149606);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-btn:hover {
+  background-color: rgb(132.5196850394, 176.9488188976, 224.9803149606);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .contact-btn:hover {
@@ -6837,6 +6847,29 @@ h6 {
   font-family: "PT Serif", serif;
 }
 
+h1,
+.nav ul li a,
+p,
+a,
+.header,
+.about-container.fade-in,
+.footer {
+  color: #000;
+}
+
+.main h1 {
+  color: #4da8da;
+}
+
+.subtitle {
+  color: #b0b0b0;
+}
+
+.main p,
+.about-content p {
+  color: #b0b0b0;
+}
+
 .logo {
   width: 150px;
   filter: brightness(0.7) sepia(0.2);
@@ -6861,6 +6894,20 @@ img {
   background-color: #2a3334;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   color: #d4d4d4;
+}
+
+.about-content h2,
+.tools-list strong,
+.tools-list li::before,
+.contact-btn {
+  color: #4da8da;
+}
+
+.contact-btn {
+  background-color: rgb(40.5944700461, 118.2534562212, 150.9055299539);
+  color: #1c2526;
+  border: 1px solid rgb(64.2995391705, 162.4377880184, 203.7004608295);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .main .me {
@@ -6944,7 +6991,7 @@ img {
 }
 
 .highlight-name {
-  color: #4da8da; /* Màu sáng hơn, tương phản với #2a3334 ≈ 3.5:1 */
+  color: #4da8da;
 }
 
 /* Stil för landningssidor analys sida */
@@ -6979,7 +7026,7 @@ img {
 .landing-analys h1 {
   margin: 0;
   font-size: 1.5rem;
-  color: #d4d4d4;
+  color: #4da8da;
 }
 
 .landing-analys .box a {
