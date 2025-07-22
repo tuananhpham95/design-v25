@@ -26,6 +26,7 @@ Description: This is my about page.
     <div class="contact-section">
       <p>Känn dig fri att utforska min portfolio och ta gärna kontakt för samarbete eller frågor!</p>
       <a href="/contact" class="contact-btn">Kontakta mig</a>
+
     </div>
 
   </div>
