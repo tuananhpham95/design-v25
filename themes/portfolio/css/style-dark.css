@@ -6530,9 +6530,6 @@ code {
   .box {
     margin: 0 20px;
   }
-  .landing-page h1 {
-    font-size: 15px;
-  }
   .technology {
     flex-direction: column;
     align-items: center;
@@ -6559,7 +6556,7 @@ code {
 
 .landing-analys h1 {
   justify-self: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 0;
   color: #333;
 }
@@ -6685,6 +6682,123 @@ code {
     max-width: 300px;
   }
 }
+/* Stil för About-sida */
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.highlight-name {
+  font-family: "Great+Vibes", cursive;
+  font-size: 2.5em;
+  font-style: italic;
+  font-weight: bold;
+  color: #1a3c5e;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.about-content {
+  line-height: 1.6;
+  color: #333;
+  max-width: 600px;
+  text-align: center;
+}
+
+.about-content h2 {
+  font-size: 1.8em;
+  margin-top: 20px;
+  color: #1a3c5e;
+  border-bottom: 2px solid #99bee6;
+  padding-bottom: 0.5rem;
+}
+
+.tools-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.tools-list li {
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.tools-list li::before {
+  content: "▶";
+  color: #1a3c5e;
+  margin-right: 0.5rem;
+}
+
+.tools-list strong {
+  color: #1a3c5e;
+}
+
+.contact-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  color: #1a3c5e;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.contact-btn:hover {
+  transform: scale(1.05);
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+/* Responsivitet */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 10px;
+  }
+  .highlight-name {
+    font-size: 2em;
+  }
+  .about-content h2 {
+    font-size: 1.5em;
+  }
+  .tools-list {
+    max-width: 90%;
+  }
+}
 html {
   height: 100%;
 }
@@ -6739,6 +6853,16 @@ img {
   filter: brightness(0.8) sepia(0.1);
 }
 
+.landing-page .box {
+  border-radius: 10px;
+}
+
+.about-container {
+  background-color: #2a3334;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #d4d4d4;
+}
+
 .main .me {
   width: 250px;
 }
@@ -6754,6 +6878,11 @@ img {
 
 .main {
   flex: 1 0 auto;
+  padding: 0 30px;
+}
+
+.main p {
+  line-height: 24px;
 }
 
 .main img {
@@ -6814,6 +6943,10 @@ img {
   color: #e0e0e0;
 }
 
+.highlight-name {
+  color: #4da8da; /* Màu sáng hơn, tương phản với #2a3334 ≈ 3.5:1 */
+}
+
 /* Stil för landningssidor analys sida */
 .main.landing .landing-analys {
   display: grid;
@@ -6835,7 +6968,7 @@ img {
   text-align: center;
   cursor: pointer;
   background-color: #2a3334;
-  border-radius: 5px;
+  border-radius: 14px;
   color: #d4d4d4;
 }
 
