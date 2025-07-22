@@ -23,6 +23,7 @@
   border: 1px solid #808080;
   padding: 1.96rem;
   cursor: pointer;
+  text-align: center;
 }
 
 .box:hover {
@@ -41,6 +42,10 @@
 
 .technology .article {
   width: 60%;
+}
+
+.skills a {
+  color: #b0b0b0;
 }
 
 .technology .menu {

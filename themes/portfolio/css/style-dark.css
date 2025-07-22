@@ -6467,6 +6467,7 @@ code {
   border: 1px solid #808080;
   padding: 1.96rem;
   cursor: pointer;
+  text-align: center;
 }
 
 .box:hover {
@@ -6485,6 +6486,10 @@ code {
 
 .technology .article {
   width: 60%;
+}
+
+.skills a {
+  color: #b0b0b0;
 }
 
 .technology .menu {
@@ -7007,20 +7012,6 @@ img {
   display: grid;
   grid-template-columns: inherit;
   gap: 1em;
-}
-
-.landing-analys .box {
-  border: 1px solid #4a4a4a;
-  padding: 1.96rem;
-  text-align: center;
-  cursor: pointer;
-  background-color: #2a3334;
-  border-radius: 14px;
-  color: #d4d4d4;
-}
-
-.landing-analys .box:hover {
-  box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .landing-analys h1 {
