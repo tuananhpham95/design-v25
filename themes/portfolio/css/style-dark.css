@@ -6592,11 +6592,13 @@ code {
 }
 
 /* Specifika klasser för analyser */
-.landing-analys .box.colors {
+.landing-analys .box.colors,
+.landing-analys .box.analys {
   background-color: #e0f7fa;
 }
 
-.landing-analys .box.load {
+.landing-analys .box.load,
+.landing-analys .box.webplats {
   background-color: #fff9c4;
 }
 
@@ -6859,7 +6861,7 @@ a,
 .header,
 .about-container.fade-in,
 .footer {
-  color: #000;
+  color: #d4d4d4;
 }
 
 .main h1 {
@@ -7030,11 +7032,13 @@ img {
 }
 
 /* Specifika klasser för analyser */
-.landing-analys .box.colors {
+.landing-analys .box.colors,
+.landing-analys .box.analys {
   background-color: #2a3a3e;
 }
 
-.landing-analys .box.load {
+.landing-analys .box.load,
+.landing-analys .box.webplats {
   background-color: #2e3a2e;
 }
 
